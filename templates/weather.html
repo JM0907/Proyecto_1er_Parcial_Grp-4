@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clima</title>
+    <style>
+        body {
+            background-image: url('https://i5.walmartimages.com/asr/bab55598-71e0-481f-b3c5-0a3550b0a662_1.8b44f7c3cf97aa68f31e41b96c3f57ce.jpeg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: rgba(247, 242, 242, 0.836);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px; /* Añade espacio para el contenido */
+        }
+        #search-bar input {
+            width: 60%;
+            padding: 10px;
+        }
+        #weather-result {
+            margin-top: 30px; /* Reducido el espacio superior */
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            padding: 5px; /* Ajuste del espacio alrededor del contenido */
+            border-radius: 20px; /* Bordes redondeados */
+        }
+        
+        h1 {
+            color: rgb(8, 8, 8); /* Cambia el color del texto de h1 a negro */
+        }
+
+        /* Añade el estilo para los botones */
+        button {
+            color: white; /* Color del texto del botón */
+            background-color: blue; /* Color de fondo del botón */
+            padding: 10px 20px; /* Ajusta el espaciado interno del botón */
+            border: none; /* Elimina el borde del botón */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        }
+    </style>
+</head>
+<br>
+<center><h1>PAGINA PARA CONSULTAR EL CLIMA GRUPO #4</h1></center>
+<body>
+    <div class="container">
+        <div id="search-bar">
+            <input type="text" placeholder="Buscar ubicación">
+        </div>
+        <br>
+        <center><button type="button">BUSCAR</button></center>
+        <div id="weather-result">
+            <!-- Utiliza una URL válida en la etiqueta src de la imagen -->
+            <img src="http://openweathermap.org/img/w/{{clima.icono}}.png" alt="....">
+            <!-- Asegúrate de que las expresiones como {{clima.ciudad}}, {{clima.descripcion}}, etc. estén correctamente formateadas y proporcionadas por el contexto de tu aplicación -->
+            <h5 class="card-title">Ciudad: {{clima.ciudad}}</h5>
+            <p class="card-text">Descripción: {{clima.descripcion}}</p>
+            <p class="card-text">Temperatura: {{clima.temperatura}}</p>
+        </div>
+    </div>
+</body>
+</html>
